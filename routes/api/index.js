@@ -24,7 +24,7 @@ passport.use(
 
 //Rutas de Cada Entidad
 var securityApiRoutes = require('./security/index')(db);
-var exaApiRoutes = require('./exa/manga'(db) );
+var exaApiRoutes = require('./exa/manga')(db);
 
 //localhost:3000/api/sec/
 router.use('/sec', securityApiRoutes);
