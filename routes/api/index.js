@@ -24,12 +24,17 @@ passport.use(
 
 //Rutas de Cada Entidad
 var securityApiRoutes = require('./security/index')(db);
+var exaApiRoutes = require('./exa/index'(db) );
 
 //localhost:3000/api/sec/
 router.use('/sec', securityApiRoutes);
 
 
 //localhost:3000/api/exa
+router.use('/exa',
+passport.authenticate('jwt', {session:false}),
+exaApiRoutes
+);
 
 
 return router;
